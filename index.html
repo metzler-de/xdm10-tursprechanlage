@@ -576,8 +576,7 @@ img{display:block;max-width:100%}
   .product-cards{margin:0 auto 32px}
   .marquee-track{gap:32px}
   .marquee-track span{gap:32px}
-  .hero-bottom{justify-content:center}
-  .hero-bottom .stats{display:none}
+  .hero-bottom{display:none}
   .topo-sub{white-space:normal!important}
   .upgrade-step{padding:24px 20px;gap:12px}
   .upgrade-step h3{font-size:1.1rem}
@@ -590,7 +589,8 @@ img{display:block;max-width:100%}
   .hero-center h1{order:1}
   .hero-center .hero-desc{order:2}
   .hero-product{order:3;max-width:100%;width:100%;margin:32px auto 0;z-index:1}
-  .hero-actions{order:4;margin-top:32px;z-index:2;position:relative}
+  .hero-actions{order:4;margin-top:-16px;z-index:2;position:relative;flex-direction:column;width:100%}
+  .hero-actions .btn-primary,.hero-actions .btn-outline{width:100%;text-align:center;box-sizing:border-box}
 }
 </style>
 </head>
@@ -627,7 +627,6 @@ img{display:block;max-width:100%}
   </div>
 
   <div class="hero-bottom">
-    <div class="label">↓ Scrollen</div>
     <div class="stats">
       <div>
         <div class="font-display stat-n">2 Adern</div>
