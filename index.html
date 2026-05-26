@@ -41,7 +41,8 @@
 }
 .section-light .text-stroke{-webkit-text-stroke:1px #0a0a0a;color:transparent}
 .section-light .btn-outline{border-color:#0a0a0a;color:#0a0a0a}
-.section-light .btn-outline:hover{background:rgba(0,0,0,0.05)}
+.section-light .btn-outline:hover{background:#E6EEEE}
+.section-light .btn-outline:active{background:#015253;color:#fff}
 .section-light.footer{background:#e3f2f0}
 .section-light.grain::after{display:none}
 
@@ -133,19 +134,31 @@ img{display:block;max-width:100%}
 }
 .hero-actions{margin-top:40px;display:flex;flex-wrap:wrap;gap:24px}
 .btn-primary{
-  position:relative;overflow:hidden;
-  background:var(--secondary);color:var(--secondary-foreground);
-  padding:14px 28px;border-radius:4px;transition:opacity .2s;
-  text-align:center;font-size:12px;
+  display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;
+  background:#015253;color:#fff;border:none;
+  height:2.625rem;padding:0.7rem 1.2rem;border-radius:0.25rem;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:1rem;font-weight:500;letter-spacing:normal;text-transform:none;
+  text-align:center;line-height:1.2;white-space:nowrap;cursor:pointer;
+  transition:background .15s ease,border-color .15s ease,color .15s ease;
 }
-.btn-primary:hover{background:#014A4B;opacity:1}
+.btn-primary:hover{background:#014A4B}
+.btn-primary:active{background:#013E3E}
 .btn-outline{
-  padding:14px 28px;border-radius:4px;
-  border:1px solid var(--foreground);color:var(--foreground);
-  transition:border-color .3s,background .3s;
-  text-align:center;font-size:12px;
+  display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;
+  background:transparent;color:#015253;border:1px solid #015253;
+  height:2.625rem;padding:calc(0.7rem - 1px) calc(1.2rem - 1px);border-radius:0.25rem;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:1rem;font-weight:500;letter-spacing:normal;text-transform:none;
+  text-align:center;line-height:1.2;white-space:nowrap;cursor:pointer;
+  transition:background .15s ease,border-color .15s ease,color .15s ease;
 }
-.btn-outline:hover{border-color:var(--secondary);background:rgba(255,255,255,0.05)}
+.btn-outline:hover{background:#E6EEEE}
+.btn-outline:active{background:#015253;color:#fff}
+
+.hero .btn-outline,.hero-grid .btn-outline{color:#fff;border-color:#fff}
+.hero .btn-outline:hover,.hero-grid .btn-outline:hover{background:rgba(255,255,255,0.1);color:#fff;border-color:#fff}
+.hero .btn-outline:active,.hero-grid .btn-outline:active{background:rgba(255,255,255,0.2);color:#fff;border-color:#fff}
 
 .hero-product{
   grid-column:span 12;
@@ -377,7 +390,7 @@ img{display:block;max-width:100%}
   flex:1;
 }
 .product-btn{
-  align-self:flex-start;margin-top:8px;
+  align-self:flex-start;margin-top:8px;color:#fff !important;
 }
 @media(min-width:768px){.upgrade-step{padding:56px 40px;min-height:400px}}
 .upgrade-step-num{
@@ -475,13 +488,17 @@ img{display:block;max-width:100%}
 .system-row:hover .arrow{opacity:1}
 
 .btn-dark{
-  display:inline-flex;align-items:center;gap:12px;
-  background:var(--secondary);color:var(--secondary-foreground);
-  padding:14px 28px;border-radius:4px;margin-top:48px;
-  transition:opacity .2s;font-size:12px;
+  display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;
+  background:#015253;color:#fff;border:none;
+  height:2.625rem;padding:0.7rem 1.2rem;border-radius:0.25rem;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:1rem;font-weight:500;letter-spacing:normal;text-transform:none;
+  text-align:center;line-height:1.2;white-space:nowrap;cursor:pointer;
+  margin-top:48px;
+  transition:background .15s ease,border-color .15s ease,color .15s ease;
 }
-.btn-dark.label{font-size:12px}
-.btn-dark:hover{opacity:.85}
+.btn-dark:hover{background:#014A4B}
+.btn-dark:active{background:#013E3E}
 
 /* ─── FAQ ─── */
 .faq{
@@ -626,8 +643,8 @@ img{display:block;max-width:100%}
         HD-Video, 7" Touch-Display und Smartphone-Anbindung inklusive.
       </p>
       <div class="hero-actions">
-        <a href="#upgrade" class="btn-primary label">So funktioniert's →</a>
-        <a href="#compatible" class="btn-outline label">Kompatible Systeme</a>
+        <a href="#upgrade" class="btn-primary">So funktioniert's <svg width="12" height="10" viewBox="0 0 14 12" fill="none" style="flex-shrink:0;display:block"><path d="M1 6h12M7 1l6 5-6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        <a href="#compatible" class="btn-outline">Kompatible Systeme</a>
       </div>
     </div>
 
@@ -787,7 +804,7 @@ img{display:block;max-width:100%}
       <div class="label" style="margin-bottom:24px;color:var(--foreground);font-size:14px">Kompatible Alt-Systeme</div>
       <ul id="systemsList"></ul>
       <p style="margin-top:32px;font-size:12px;color:var(--muted-foreground);line-height:1.6;max-width:42rem">Alle genannten Marken-, Produkt- und Firmennamen sind Eigentum ihrer jeweiligen Inhaber und dienen ausschließlich der Beschreibung der Kompatibilität. Eine geschäftliche Verbindung, Partnerschaft oder Autorisierung durch die genannten Hersteller besteht nicht.</p>
-      <a href="#products" class="btn-dark label">XDM10 Serie ansehen →</a>
+      <a href="#products" class="btn-dark">XDM10 Serie ansehen <svg width="12" height="10" viewBox="0 0 14 12" fill="none" style="flex-shrink:0;display:block"><path d="M1 6h12M7 1l6 5-6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
     </div>
   </div>
 </section>
@@ -812,7 +829,7 @@ img{display:block;max-width:100%}
       </h2>
     </div>
     <div class="footer-right">
-      <a href="#" class="btn-outline label">Installationsvideos ↗</a>
+      <a href="#" class="btn-primary">Installationsvideos <svg width="12" height="12" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;display:block"><path d="M3 11L11 3M5 3h6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
     </div>
   </div>
 
@@ -825,7 +842,7 @@ img{display:block;max-width:100%}
         <div class="label" style="color:#015253">2-Draht-BUS / 01</div>
         <h3 class="font-display">XDM10</h3>
         <p>Metzler XDM10 Video-Türsprechanlage mit austauschbarem Namensschild | 2-Draht-BUS | 1 Klingeltaster</p>
-        <a href="https://edelstahl-tuerklingel.de/metzler-xdm10-video-tuersprechanlage-mit-austauschbarem-namensschild-2-draht-bus-1-klingeltaster-ral-7016-anthrazit-maxior" class="btn-primary label product-btn" target="_blank">Konfigurieren →</a>
+        <a href="https://edelstahl-tuerklingel.de/metzler-xdm10-video-tuersprechanlage-mit-austauschbarem-namensschild-2-draht-bus-1-klingeltaster-ral-7016-anthrazit-maxior" class="btn-primary product-btn" target="_blank">Konfigurieren <svg width="12" height="10" viewBox="0 0 14 12" fill="none" style="flex-shrink:0;display:block"><path d="M1 6h12M7 1l6 5-6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
       </div>
     </div>
     <div class="product-card">
@@ -836,7 +853,7 @@ img{display:block;max-width:100%}
         <div class="label" style="color:#015253">2-Draht-BUS / 02</div>
         <h3 class="font-display">XDM10</h3>
         <p>Metzler XDM10 Video-Türsprechanlage mit austauschbarem Namensschild | 2-Draht-BUS | 2 Klingeltaster</p>
-        <a href="https://edelstahl-tuerklingel.de/metzler-xdm10-video-tuersprechanlage-mit-austauschbarem-namensschild-2-draht-bus-2-klingeltaster-ral-7016-anthrazit-maxior" class="btn-primary label product-btn" target="_blank">Konfigurieren →</a>
+        <a href="https://edelstahl-tuerklingel.de/metzler-xdm10-video-tuersprechanlage-mit-austauschbarem-namensschild-2-draht-bus-2-klingeltaster-ral-7016-anthrazit-maxior" class="btn-primary product-btn" target="_blank">Konfigurieren <svg width="12" height="10" viewBox="0 0 14 12" fill="none" style="flex-shrink:0;display:block"><path d="M1 6h12M7 1l6 5-6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
       </div>
     </div>
     <div class="product-card">
@@ -847,7 +864,7 @@ img{display:block;max-width:100%}
         <div class="label" style="color:#015253">2-Draht-BUS / 03</div>
         <h3 class="font-display">XDM10</h3>
         <p>Metzler XDM10 Video-Türsprechanlage mit austauschbarem Namensschild | 2-Draht-BUS | 3 Klingeltaster</p>
-        <a href="https://edelstahl-tuerklingel.de/metzler-xdm10-video-tuersprechanlage-mit-austauschbarem-namensschild-2-draht-bus-3-klingeltaster-ral-7016-anthrazit-maxior" class="btn-primary label product-btn" target="_blank">Konfigurieren →</a>
+        <a href="https://edelstahl-tuerklingel.de/metzler-xdm10-video-tuersprechanlage-mit-austauschbarem-namensschild-2-draht-bus-3-klingeltaster-ral-7016-anthrazit-maxior" class="btn-primary product-btn" target="_blank">Konfigurieren <svg width="12" height="10" viewBox="0 0 14 12" fill="none" style="flex-shrink:0;display:block"><path d="M1 6h12M7 1l6 5-6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
       </div>
     </div>
   </div>
